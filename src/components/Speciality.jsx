@@ -1,4 +1,5 @@
 import React from 'react'
+import { specialties } from './data/SpecialityData'
 
 export default function Speciality() {
     return (
@@ -9,30 +10,13 @@ export default function Speciality() {
                 <span>your appointment hassle-free.</span>
             </div>
             <div className='flex gap-10'>
-                <div className='flex flex-col items-center gap-3'>
-                    <img src="/General_physician.svg" alt="" className='w-20' />
-                    <p>General Physician</p>
-                </div>
-                <div className='flex flex-col items-center gap-3'>
-                    <img src="/Gynecologist.svg" alt="" className='w-20' />
-                    <p>Gynecologist</p>
-                </div>
-                <div className='flex flex-col  gap-3'>
-                    <img src="/Dermatologist.svg" alt="" className='w-20' />
-                    <p>Dermatologist</p>
-                </div>
-                <div className='flex flex-col gap-3'>
-                    <img src="/Pediatricians.svg" alt="" className='w-20' />
-                    <p>Pediatricians</p>
-                </div>
-                <div className='flex flex-col gap-3'>
-                    <img src="/Neurologist.svg" alt="" className='w-20' />
-                    <p>Neurologist</p>
-                </div>
-                <div className='flex flex-col items-center gap-3'>
-                    <img src="Gastroenterologist.svg" alt="" className='w-20' />
-                    <p>Gastroenterologist</p>
-                </div>
+                {specialties.map((spec) => (
+                    <div className='flex flex-col items-center gap-3'>
+                        <img src={spec.image} alt={spec.name} className='w-20' />
+                        <p>{spec.name}</p>
+                    </div>
+                ))}
+
             </div>
         </div>
     )
