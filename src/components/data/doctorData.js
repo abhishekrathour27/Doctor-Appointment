@@ -1,0 +1,73 @@
+export const doctorsData = [
+    {
+      id: 1,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc1.png",
+    },
+    {
+      id: 2,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc2.png",
+    },
+    {
+      id: 3,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc3.png",
+    },
+    {
+      id: 4,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc4.png",
+    },
+    {
+      id: 5,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc5.png",
+    },
+    {
+      id: 6,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc1.png",
+    },
+    {
+      id: 7,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc2.png",
+    },
+    {
+      id: 8,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc3.png",
+    },
+    {
+      id: 9,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc4.png",
+    },
+    {
+      id: 10,
+      name: "Dr. Richard James",
+      specialty: "General Physician",
+      status: "Available",
+      image: "/doc5.png",
+    },
+  ];
+  

@@ -11,7 +11,7 @@ export default function Header() {
                     <p>Simply browse through our extensive list of trusted doctors,
                         schedule your appointment hassle-free.</p>
                 </div>
-                <button className='bg-white text-indigo-500 py-2.5 px-6 rounded-4xl w-fit cursor-pointer'>Book appointment</button>
+                <button className='bg-violet-100 text-indigo-500 py-2.5 px-6 rounded-4xl w-fit cursor-pointer'>Book appointment</button>
             </div>
             {/* Right side */}
             <div className='mt-20'>
