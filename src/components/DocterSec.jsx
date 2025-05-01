@@ -36,7 +36,7 @@ export default function DocterSec() {
             <DocterComp lastIndex={lastIndex} doctorsData={doctorsData}  />
 
             <center>
-                <button onClick={() => setLastIndex(lastIndex + 4)} className={`${doctorsData.length <= lastIndex ? "hidden " : "flex"}  bg-violet-200 py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-violet-300 cursor-pointer`}>more</button>
+                <button onClick={() => setLastIndex(lastIndex + 4)} className={`${doctorsData.length <= lastIndex ? "hidden " : "flex"}  bg-violet-200 py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-violet-300 cursor-pointer`}>more</button> 
             </center>
         </div>
 
