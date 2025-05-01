@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { doctorsData } from './data/doctorData'
 import { DotIcon } from 'lucide-react'
 
-export default function DocterComp({ lastIndex=4 , doctorsData = [] }) {
+export default function DocterComp({ doctorsData=[] , lastIndex=4 ,}) {
 
     return (
         <div>

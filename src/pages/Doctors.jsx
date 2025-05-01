@@ -7,7 +7,7 @@ import { category } from '../components/data/doctorCategory'
 export default function Doctors() {
 
   const [doctor, setDoctor] = useState('')
-  const [all , setAll] = useState(false);
+  const [all , setAll] = useState(true);
 
   const filteredDoctors = doctor ? doctorsData.filter((doc) => doc.specialty === doctor) : doctorsData
 
@@ -15,6 +15,7 @@ export default function Doctors() {
   return (
     <div className='space-y-3 w-[80vw]'>
       <p>Browse Through the Docter Specialist</p>
+      {console.log(doctorsData)}
       <div>
         <div className='flex gap-10'>
           <div className='grid grid-cols-1 gap-4 h-fit'>
