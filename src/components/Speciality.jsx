@@ -13,7 +13,7 @@ export default function Speciality() {
             </div>
             <div className='flex gap-10'>
                 {specialties.map((spec) => (
-                    <div onClick={() => navigate(`/docter/${spec.name}`)} className='flex flex-col items-center gap-3 hover:scale-110 transition-all duration-200'>
+                    <div onClick={() => navigate(`/docter/${spec.name}`)} className='flex flex-col items-center gap-3 hover:scale-110 transition-all cursor-pointer duration-200'>
                         <img src={spec.image} alt={spec.name} className='w-20' />
                         <p>{spec.name}</p>
                     </div>

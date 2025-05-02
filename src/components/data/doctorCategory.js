@@ -3,7 +3,7 @@ export const category = [
     'General Physician',
   'Gynecologist',
   'Dermatologist',
-  'Pediatricans',
+  'Pediatricians',
   'Neurologist',
-  'Gastroenterologis'
+  'Gastroenterologist'
 ];

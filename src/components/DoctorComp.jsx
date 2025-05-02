@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import { doctorsData } from './data/doctorData'
 import { DotIcon } from 'lucide-react'
+import { useNavigate } from 'react-router'
 
 export default function DocterComp({ doctorsData=[] , lastIndex=4 ,}) {
+
+    const navigate = useNavigate();
+    
 
     return (
         <div>
             <div className="grid grid-cols-4 gap-5">
                 {doctorsData.slice(0, lastIndex).map((doc) => (
-                    <div key={doc.id} className="border border-violet-200 hover:scale-110 group transition-all duration-300 w-fit h-[50vh] rounded-xl">
+                    <div onClick={()=> navigate(`/docter/doctorInfo/${doc.id}`)} key={doc.id} className="border border-violet-200 hover:scale-105 group transition-all duration-300 w-fit h-[50vh] rounded-xl">
                         <img
                             src={doc.image}
                             alt={doc.name}
@@ -16,8 +20,8 @@ export default function DocterComp({ doctorsData=[] , lastIndex=4 ,}) {
                             className="bg-violet-200 rounded-t-xl"
                         />
                         <div className="pl-1.5 py-4">
-                            <p className="flex text-green-500 items-center">
-                                <DotIcon />
+                            <p className={`flex ${doc.status === 'Available' ? 'bg-green-600/20 text-green-500 px-2 py-0.5 rounded-full w-fit' : ' px-2 py-0.5 rounded-full w-fit bg-rose-600/20 text-rose-500 '} items-center`}>
+                                {/* <DotIcon /> */}
                                 {doc.status}
                             </p>
                             <h3 className="text-lg font-semibold">{doc.name}</h3>

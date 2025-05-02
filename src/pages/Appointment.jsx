@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { days } from '../components/data/appointDateData'
 import { times } from '../components/data/appointDateData'
 // import { doctorsData } from '../components/data/doctorData'
-import DocterComp from '../components/DocterComp'
+import DocterComp from '../components/DoctorComp'
 
 
 export default function Appointment() {
@@ -65,28 +65,6 @@ export default function Appointment() {
             <div className='space-y-4'>
                 <h1 className='text-3xl font-semibold'>Related Doctors</h1>
                 <p>Simply browse through our extensive list of trusted doctors.</p>
-                {/* <div className="grid grid-cols-4 gap-5">
-                    {doctorsData.slice(0, 4).map((doc) => (
-                        <div key={doc.id} className="border border-violet-200 hover:scale-110 group transition-all duration-300 w-fit h-[50vh] rounded-xl">
-                            <img
-                                src={doc.image}
-                                alt={doc.name}
-                                width="230px"
-                                className="bg-violet-200 rounded-t-xl"
-                            />
-                            <div className="pl-1.5 py-4">
-                                <p className="flex text-green-500 items-center">
-                                    <DotIcon />
-                                    {doc.status}
-                                </p>
-                                <h3 className="text-lg font-semibold">{doc.name}</h3>
-                                <p>{doc.specialty}</p>
-                                <p className=' hidden group-hover:block text-sm text-indigo-700  max-w-56'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
                 <DocterComp />
 
             </div>

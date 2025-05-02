@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DocterComp from '../components/DocterComp'
+import DocterComp from '../components/DoctorComp'
 import { doctorsData } from '../components/data/doctorData'
 import { category } from '../components/data/doctorCategory'
 import { useParams } from 'react-router'

@@ -1,7 +1,7 @@
 import { DotIcon } from 'lucide-react'
 import React, { useState } from 'react'
 import { doctorsData } from './data/doctorData'
-import DocterComp from './DocterComp'
+import DocterComp from './DoctorComp'
 
 export default function DocterSec() {
     const [lastIndex, setLastIndex] = useState(4)
