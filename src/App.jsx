@@ -7,6 +7,8 @@ import Doctors from './pages/Doctors'
 import Contact from './pages/Contact'
 import Appointment from './pages/Appointment'
 import DoctorInfo from './pages/DoctorInfo'
+import Login from './pages/Login&SignUp/Login'
+import SignUp from './pages/Login&SignUp/SignUp'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +23,8 @@ function App() {
         <Route path='/docter/:id' element={<Doctors/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/appointment' element={<Appointment/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/sign-up' element={<SignUp/>} />
         
       </Routes>
     </div>

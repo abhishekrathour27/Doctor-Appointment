@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='flex  justify-center h-[40vh] mt-16'>
+        <div className='flex  justify-center h-[40vh] mt-16 text-indigo-800'>
             <div className="grid [grid-template-columns:1.8fr_1fr_1fr] w-[80vw] h-[35vh]  gap-20  border-b border-gray-400">
                 <div className='space-y-8'>
                     <img src="/logo.svg" alt="" />
