@@ -11,6 +11,9 @@ export default function Home() {
       <Speciality/>
       <DocterSec/>
       <CreateAccount/>
+
+        {/* <div className='h-10 w-10 border-l-4 border-t-4 border-indigo-800 rounded-full animate-pulse'>
+      </div> */}
     </div>
   )
 }

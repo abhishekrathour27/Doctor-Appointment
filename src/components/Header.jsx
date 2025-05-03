@@ -14,8 +14,7 @@ export default function Header() {
                     <p>Simply browse through our extensive list of trusted doctors,
                         schedule your appointment hassle-free.</p>
                 </div>
-                <button className='bg-violet-100 text-indigo-500 py-2.5 px-6 rounded-4xl w-fit cursor-pointer'
-                onClick={()=>navigate('/appointment')}>Book appointment</button>
+                
             </div>
             {/* Right side */}
             <div className='mt-20'>

@@ -1,3 +1,4 @@
+import { Eye, EyeClosed } from 'lucide-react';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 
@@ -7,12 +8,14 @@ export default function SignUp() {
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [pass, setPass] = useState('');
+    const [show, setShow] = useState(false)
+
 
     const toggleFormData = () => {
         const userData = {
             userName: name,
             userMail: mail,
-            password: pass
+            password: pass,
         };
 
         const data = JSON.parse(localStorage.getItem("user-detail")) || [];
@@ -52,12 +55,15 @@ export default function SignUp() {
             <div>
                 <p>Password :</p>
                 <input
-                    type="password"
+                    type={show ? 'text' : 'password'}
                     value={pass}
                     onChange={(e) => setPass(e.target.value)}
                     placeholder='Enter your password'
-                    className='border border-indigo-400 py-1.5 px-5 rounded-lg outline-none w-full'
+                    className='border border-indigo-400 py-1.5 px-5 rounded-lg outline-none w-full relative'
                 />
+                <div onClick={() => setShow(!show)} className='relative left-54 bottom-7.5 cursor-pointer'>
+                    {show ? <Eye /> : <EyeClosed />}
+                </div>
             </div>
             <button
                 onClick={toggleFormData}

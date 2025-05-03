@@ -1,15 +1,16 @@
 import { VerifiedIcon } from 'lucide-react'
 import React from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { doctorsData } from '../components/data/doctorData';
 
 export default function DoctorInfo() {
-   
-  const params = useParams();
-  const info = params.id;
+       
+    const navigate = useNavigate();
+    const params = useParams();
+    const info = params.id;
 
-  const filterData = doctorsData.find((d)=> Number(d.id) === Number(info))
-  console.log(filterData)
+    const filterData = doctorsData.find((d) => Number(d.id) === Number(info))
+    //   console.log(filterData)
 
 
 
@@ -28,6 +29,8 @@ export default function DoctorInfo() {
                     <p className='font-semibold'>About</p>
                     <p>{filterData.about}</p>
                     <p className='font-semibold'>Appointment fee : ${filterData.fee}</p>
+                    <button className='bg-indigo-500 hover:bg-indigo-600 text-white py-2.5 px-6 rounded-4xl w-fit cursor-pointer'
+                        onClick={() => navigate(`/appointment/${info}`)}>Book appointment</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
+import { Eye, EyeClosed } from 'lucide-react';
 import React, { useState }  from 'react'
 import { useNavigate } from 'react-router'
-import SignUp from './SignUp';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -11,19 +11,23 @@ export default function Login() {
 
     const [logInPass, setLogInPass] = useState('');
 
+    const [show, setShow] = useState(false)
+
     const checkDetail = () => {
         const localStorageData = JSON.parse(localStorage.getItem('user-detail')) || [];
 
         const matchUser = localStorageData.find((user) => user.userMail === logInMail && user.password === logInPass)
+        console.log(matchUser)
 
         if (matchUser) {
+            localStorage.setItem('login-detail',JSON.stringify(matchUser))
             navigate('/')
         }
         else {
             alert('Incorrect email or password')
         }
 
-        localStorageData.find((e) => e.pa)
+        // localStorageData.find((e) => e.pa)
     }
 
 
@@ -39,8 +43,12 @@ export default function Login() {
                 </div>
                 <div>
                     <p>Password :</p>
-                    <input type="password" value={logInPass} onChange={(e) => setLogInPass(e.target.value)}
-                        placeholder='Enter your password' className='border border-indigo-400 py-1.5 px-5 rounded-lg outline-none w-full' />
+                    <input type={show ? 'text' : 'password'}
+                    value={logInPass} onChange={(e) => setLogInPass(e.target.value)}
+                        placeholder='Enter your password' className='border relative border-indigo-400 py-1.5 px-5 rounded-lg outline-none w-full' />
+                       <div onClick={()=> setShow(!show)} className='relative left-54 bottom-7.5 cursor-pointer'>
+                        {show? <Eye/> : <EyeClosed/>}
+                       </div>
                 </div>
                 <button onClick={checkDetail}
                     className='bg-indigo-500 text-white py-2 px-6 rounded-lg h-fit w-full  hover:bg-indigo-600 cursor-pointer'>Login</button>

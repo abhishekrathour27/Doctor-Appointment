@@ -1,11 +1,15 @@
+import { UserCircle2 } from 'lucide-react';
 import React from 'react'
 import { useNavigate } from 'react-router'
 
 export default function Navbar() {
 
     const navigate = useNavigate();
-    const localStorageData = JSON.parse(localStorage.getItem('user-detail'));
+    const localStorageData = JSON.parse(localStorage.getItem('login-detail'))
 
+
+    const name = localStorageData?.userName;
+    const firstLetter = name?.charAt(0).toUpperCase();
 
     return (
         <nav className='flex justify-center'>
@@ -25,8 +29,17 @@ export default function Navbar() {
                         <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                     </li>
                 </ul>
-                <button onClick={() => navigate('/sign-up')}
-                    className={`${localStorageData ? 'hidden' : 'bg-indigo-500 text-white py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer'}`}>Create account</button>
+                {localStorageData ? (
+                    <button onClick={() => navigate('/profile')}
+                        className='bg-indigo-200 text-2xl w-10 h-10  flex items-center justify-center rounded-full cursor-pointer'>{firstLetter}</button>
+                ) : (
+                    <button
+                        onClick={() => navigate('/login')}
+                        className="bg-indigo-500 text-white py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer"
+                    >
+                        Log-In
+                    </button>
+                )}
             </div>
         </nav>
     )
