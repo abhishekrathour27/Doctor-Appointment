@@ -23,7 +23,7 @@ function App() {
   const [booking, setBooking] = useState([])
   console.log(booking)
 
-  
+
 
   return (
     <div className='text-indigo-800 flex flex-col items-center'>
@@ -38,8 +38,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='/myAppointment' element={<MyAppointment booking={booking}  />} />
-
+        <Route path='/myAppointment' element={<MyAppointment booking={booking} />} />
       </Routes>
     </div>
   )
