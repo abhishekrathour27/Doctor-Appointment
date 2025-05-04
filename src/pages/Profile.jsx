@@ -31,6 +31,8 @@ export default function Profile() {
                 <p className='border-b border-indigo-300 w-fit'>CONTACT INFORMATION</p>
                 <p>EMAIL ID : {localStorageData.userMail}</p>
                 <p>Phone no. : +1 009 8272 9327</p>
+                <button onClick={()=> navigate('/myAppointment')} 
+                 className='bg-indigo-500 text-white py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer'>My Appointment</button>
             </div>
         </div>
     )

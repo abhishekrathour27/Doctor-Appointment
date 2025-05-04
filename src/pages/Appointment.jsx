@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 import { days } from '../components/data/appointDateData'
 import { times } from '../components/data/appointDateData'
 // import { doctorsData } from '../components/data/doctorData'
-import DocterComp from '../components/DoctorComp'
 import { doctorsData } from '../components/data/doctorData'
 import { useParams } from 'react-router'
 
 
-export default function Appointment() {
+export default function Appointment({ setBooking, booking }) {
+
+
 
     const params = useParams();
     const info = params.id;
@@ -16,18 +17,21 @@ export default function Appointment() {
 
     const filterData = doctorsData.find((d) => Number(d.id) === Number(info))
 
-    const [booking, setBooking] = useState([])
+    // const [booking, setBooking] = useState([])
 
     const [day, setDay] = useState([]);
     const [time, setTime] = useState([]);
 
-   
-        const bookData = {
-            days: day,
-            times: time
-        }
-    
-    // console.log(booking)
+
+    const bookData = {
+        days: day,
+        times: time,
+        doctor: filterData
+    }
+    const localStorageData = JSON.parse(localStorage.getItem('login-detail'))
+    console.log('data', localStorageData)
+
+    console.log(booking.days)
 
 
     return (
@@ -73,7 +77,15 @@ export default function Appointment() {
                         ))}
                     </div>
                 </div>
-                <button onClick={()=> setBooking(bookData)}
+                <button onClick={() => {
+                    if (localStorageData) {
+                        setBooking([...booking, bookData])
+                        alert('Appointment Booked Successfully')
+                    }else{
+                        alert('Login for Book Appointment')
+                    }
+
+                }}
                     className='bg-indigo-500 text-white py-3 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer'>Book an appointment</button>
             </div>
 
@@ -86,6 +98,6 @@ export default function Appointment() {
 
             </div> */}
 
-        </div>
+        </div >
     )
 }

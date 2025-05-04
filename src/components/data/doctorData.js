@@ -61,7 +61,7 @@ export const doctorsData = [
   },
   {
     id: 7,
-    name: "Dr. Khana",
+    name: "Dr. Khanna ",
     specialty: "Pediatricians",
     status: "Available",
     image: "/doc7.png",
