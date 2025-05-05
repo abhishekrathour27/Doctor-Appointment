@@ -1,6 +1,7 @@
 import { LogOutIcon } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 export default function Profile() {
     const navigate = useNavigate();
@@ -10,6 +11,7 @@ export default function Profile() {
     const logOut = () => {
         localStorage.removeItem('login-detail');
         navigate('/')
+        toast.success('Logged-Out successfully');
     }
 
 

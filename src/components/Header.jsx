@@ -5,7 +5,7 @@ export default function Header() {
     const navigate = useNavigate();
     
     return (
-        <div className='bg-indigo-500 text-white min-h-[60vh] min-w-[80vw] rounded-lg flex items-center mt-5'>
+        <div className='bg-indigo-600 text-white min-h-[60vh] min-w-[80vw] rounded-lg flex items-center mt-5'>
             {/* {Left Side} */}
             <div className='flex flex-col gap-4 h-full pl-10 w-1/2'>
                 <h1 className='text-4xl font-semibold w-96'>Book Appointment With Trusted Doctors</h1>

@@ -2,9 +2,9 @@ import { DotIcon, VerifiedIcon } from 'lucide-react'
 import React, { useState } from 'react'
 import { days } from '../components/data/appointDateData'
 import { times } from '../components/data/appointDateData'
-// import { doctorsData } from '../components/data/doctorData'
 import { doctorsData } from '../components/data/doctorData'
 import { useParams } from 'react-router'
+import { toast } from 'react-toastify';
 
 
 export default function Appointment({ setBooking, booking }) {
@@ -29,9 +29,9 @@ export default function Appointment({ setBooking, booking }) {
         doctor: filterData
     }
     const localStorageData = JSON.parse(localStorage.getItem('login-detail'))
-    console.log('data', localStorageData)
+    // console.log('data', localStorageData)
 
-    console.log(booking.days)
+    // console.log(booking.days)
 
 
     return (
@@ -80,24 +80,13 @@ export default function Appointment({ setBooking, booking }) {
                 <button onClick={() => {
                     if (localStorageData) {
                         setBooking([...booking, bookData])
-                        alert('Appointment Booked Successfully')
+                        toast.success('Appointment Booked Successfully')
                     }else{
-                        alert('Login for Book Appointment')
+                        toast.warning('Login for Book Appointment')
                     }
-
                 }}
                     className='bg-indigo-500 text-white py-3 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer'>Book an appointment</button>
             </div>
-
-            {/* Doctor sec */}
-
-            {/* <div className='space-y-4'>
-                <h1 className='text-3xl font-semibold'>Related Doctors</h1>
-                <p>Simply browse through our extensive list of trusted doctors.</p>
-                <DocterComp />
-
-            </div> */}
-
         </div >
     )
 }

@@ -1,6 +1,7 @@
 import { Eye, EyeClosed } from 'lucide-react';
 import React, { useState }  from 'react'
 import { useNavigate } from 'react-router'
+import { toast } from 'react-toastify';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -22,9 +23,10 @@ export default function Login() {
         if (matchUser) {
             localStorage.setItem('login-detail',JSON.stringify(matchUser))
             navigate('/')
+            toast.success('Looged-In successfully')
         }
         else {
-            alert('Incorrect email or password')
+            toast.error('Incorrect email or password')
         }
 
         // localStorageData.find((e) => e.pa)

@@ -2,9 +2,10 @@ import { VerifiedIcon } from 'lucide-react'
 import React from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { doctorsData } from '../components/data/doctorData';
+import { toast } from 'react-toastify';
 
 export default function DoctorInfo() {
-       
+
     const navigate = useNavigate();
     const params = useParams();
     const info = params.id;
@@ -30,7 +31,8 @@ export default function DoctorInfo() {
                     <p>{filterData.about}</p>
                     <p className='font-semibold'>Appointment fee : ${filterData.fee}</p>
                     <button className='bg-indigo-500 hover:bg-indigo-600 text-white py-2.5 px-6 rounded-4xl w-fit cursor-pointer'
-                        onClick={() => navigate(`/appointment/${info}`)}>Book appointment</button>
+                        onClick={() => filterData.status === 'Available' ? navigate(`/appointment/${info}`) : toast.warning('Doctor is not avaiable')     
+                        }>Book appointment</button>
                 </div>
             </div>
         </div>

@@ -11,7 +11,6 @@ import Login from './pages/Login&SignUp/Login'
 import SignUp from './pages/Login&SignUp/SignUp'
 import Profile from './pages/Profile'
 import MyAppointment from './pages/MyAppointment'
-import { doctorsData } from './components/data/doctorData'
 
 function App() {
 
