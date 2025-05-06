@@ -11,7 +11,7 @@ export default function Speciality() {
                 <p className='w-70 lg:w-[35vw] '>Simply browse through our extensive list of trusted doctors, schedule</p>
                 <span className='mt-4'>your appointment hassle-free.</span>
             </div>
-            <div className='grid grid-cols-2 lg:grid lg:grid-cols-6 gap-10'>
+            <div className='grid grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-6 gap-10'>
                 {specialties.map((spec) => (
                     <div onClick={() => navigate(`/doctor/${spec.name}`)} className='flex flex-col items-center gap-3 hover:scale-110 transition-all cursor-pointer duration-200'>
                         <img src={spec.image} alt={spec.name} className='w-20' />

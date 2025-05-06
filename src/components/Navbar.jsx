@@ -16,12 +16,12 @@ export default function Navbar() {
     return (
         <nav className='flex justify-center'>
             <div className=' flex h-fit py-5 items-center justify-between pb-10 text-indigo-800 lg:w-[80vw] w-[95vw] '>
-                <img src="/logo.svg" alt="logo" className='w-[50vw] lg:w-[12vw] cursor-pointer' onClick={() => navigate('/')} />
+                <img src="/logo.svg" alt="logo" className='w-[230px] lg:w-[12vw] cursor-pointer' onClick={() => navigate('/')} />
                 <ul className='hidden lg:flex gap-10'>
                     <li className='relative inline-block cursor-pointer group hover:text-indigo-600' onClick={() => navigate('/')}>Home
                         <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                     </li>
-                    <li className='relative inline-block cursor-pointer group hover:text-indigo-600' onClick={() => navigate('/docter')}>All Doctors
+                    <li className='relative inline-block cursor-pointer group hover:text-indigo-600' onClick={() => navigate('/doctor')}>All Doctors
                         <span className="absolute left-0 bottom-0 w-full h-0.5 bg-indigo-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                     </li>
                     <li className='relative inline-block cursor-pointer group hover:text-indigo-600' onClick={() => navigate('/about')}>About

@@ -10,13 +10,12 @@ export default function DocterComp({ doctorsData=[] , lastIndex=4 ,}) {
 
     return (
         <div>
-            <div className="grid grid-cols-1 justify-center items-center lg:grid lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 justify-center items-center sm:grid sm:grid-cols-2 md:grid md:grid-cols-3  lg:grid lg:grid-cols-4 lg:w-fit gap-5 sm:w-[95vw]">
                 {doctorsData.slice(0, lastIndex).map((doc) => (
-                    <div onClick={()=> navigate(`/doctor/doctorInfo/${doc.id}`)} key={doc.id} className="border border-violet-200 hover:scale-105 group transition-all duration-300 h-fit lg:w-fit w-[95vw] lg:h-[55vh]  rounded-xl ">
+                    <div onClick={()=> navigate(`/doctor/doctorInfo/${doc.id}`)} key={doc.id} className="border border-violet-200 hover:scale-105 group transition-all duration-300 h-fit  w-fit 2xl:h-[55vh]  rounded-xl ">
                         <img
                             src={doc.image}
                             alt={doc.name}
-                            width=""
                             className="bg-violet-200 rounded-t-xl w-fit lg:w-[16vw]"
                         />
                         <div className="pl-1.5 py-4 space-y-2">
