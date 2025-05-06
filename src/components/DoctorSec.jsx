@@ -6,8 +6,8 @@ import DocterComp from './DoctorComp'
 export default function DocterSec() {
     const [lastIndex, setLastIndex] = useState(4)
     return (
-        <div className='flex flex-col gap-6 min-h-fit py-8 '>
-            <div className='flex flex-col items-center gap-2'>
+        <div className='flex flex-col gap-6 min-h-fit py-8 justify-center items-center '>
+            <div className='flex flex-col items-center gap-2 w-[95vw] lg:w-fit'>
                 <h1 className='text-4xl font-semibold'>Top Doctors to Book</h1>
                 <p>Simply browse through our extensive list of trusted doctors.</p>
             </div>
