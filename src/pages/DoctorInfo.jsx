@@ -17,11 +17,11 @@ export default function DoctorInfo() {
 
     return (
         <div>
-            <div className='flex gap-8 w-[80vw] h-fit'>
-                <div className='bg-indigo-500 w-fit rounded-xl'>
+            <div className='md:flex md:gap-8 w-[80vw] h-fit space-y-3'>
+                <div className='bg-indigo-500 md:w-fit rounded-xl md:h-fit flex flex-col items-center'>
                     <img src={filterData.image} alt={filterData.name} />
                 </div>
-                <div className='border w-[60vw] flex flex-col justify-center px-9 rounded-xl gap-3.5'>
+                <div className='border md:w-[60vw] flex flex-col justify-center px-9 rounded-xl gap-3.5 py-5 lg:py-0'>
                     <h1 className='flex gap-2 items-center text-4xl font-semibold' >{filterData.name}<VerifiedIcon /> </h1>
                     <div className='flex gap-3 items-center'>
                         <p>{filterData.specialty}</p>

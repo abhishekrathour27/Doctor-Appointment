@@ -37,7 +37,7 @@ export default function Navbar() {
                 ) : (
                     <button
                         onClick={() => navigate('/login')}
-                        className="bg-indigo-500 text-white py-2.5 px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer"
+                        className="bg-indigo-500 text-white py-2.5 hidden lg:block px-6 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer"
                     >
                         Log-In
                     </button>
@@ -51,7 +51,19 @@ export default function Navbar() {
                     <li className='cursor-pointer' onClick={() => navigate('/doctor')}>All Doctor</li>
                     <li className='cursor-pointer' onClick={() => navigate('/about')}>About</li>
                     <li className='cursor-pointer' onClick={() => navigate('/contact')}>Contact</li>
-                    <li className='cursor-pointer'></li>
+                    {localStorageData ? (
+                        <button onClick={() => navigate('/profile')}
+                            className='bg-indigo-200 text-2xl w-10 h-10   lg:flex lg:items-center lg:justify-center rounded-full cursor-pointer'>{firstLetter}</button>
+                    ) : (
+                        <button
+                            onClick={() => navigate('/login')}
+                            className="bg-indigo-500 text-lg text-white py-2 px-4 rounded-4xl h-fit w-fit hover:bg-indigo-600 cursor-pointer"
+                        >
+                            Log-In
+                        </button>
+                    )}
+
+
                     <X className='absolute right-2 top-0 border p-1 cursor-pointer' onClick={() => setShow(false)} />
                 </ul>
             </div>}

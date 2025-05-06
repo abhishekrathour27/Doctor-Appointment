@@ -19,13 +19,13 @@ export default function Profile() {
     // console.log(data)
 
     return (
-        <div className='w-[80vw] space-y-10 '>
-            <div className=' border-b border-indigo-300 w-[30vw] space-y-2'>
+        <div className='flex flex-col items-center sm:block w-[80vw] space-y-10 '>
+            <div className=' border-b border-indigo-300 w-fit md:w-[30vw] space-y-2'>
                 <img src="user.webp" alt="" className='w-40' />
                 <div className='flex items-center gap-10'>
                     <h3 className='text-2xl font-semibold'>{localStorageData.userName} </h3>
                     <LogOutIcon onClick={logOut}
-                        className='cursor-pointer' />
+                        className='cursor-pointer w-fit' />
                 </div>
                 <hr />
             </div>

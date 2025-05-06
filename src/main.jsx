@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
       <Navbar />
       <App />
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}

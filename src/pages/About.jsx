@@ -4,9 +4,9 @@ export default function About() {
   return (
     <div className='w-[80vw] space-y-8'>
       <center><h1 className='text-3xl font-medium'>ABOUT <span className='font-semibold'>US</span></h1></center>
-      <div className='flex gap-11'>
+      <div className='flex flex-col lg:flex-row gap-11'>
         <div>
-          <img src="/about_image.png" alt="about" />
+          <img src="/about_image.png" alt="about" className='md:w-[40vw] lg:w-[70vw]' />
         </div>
         <div className='space-y-5'>
           <p>Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records</p>
@@ -17,18 +17,18 @@ export default function About() {
       </div>
       <div className='space-y-10 mt-20'>
         <h1 className='text-2xl font-semibold'>WHY CHOOSE US :</h1>
-        <div className='grid grid-cols-3 '>
-          <div className='space-y-2 border border-indigo-300 py-5 px-10'>
+        <div className=' grid lg:grid lg:grid-cols-3 '>
+          <div className=' space-y-2 border border-indigo-300 py-5 px-10'>
             <h3 className='font-semibold'>EFFICIENCY :</h3>
-            <p className='w-[20vw]'>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
+            <p className='lg:w-[20vw]'>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
           </div>
           <div className='space-y-2 border border-indigo-300 py-5 px-10'>
             <h3 className='font-semibold'>CONVENIENCE :</h3>
-            <p className='w-[20vw]'>Access to a network of trusted healthcare professionals in your area.</p>
+            <p className='lg:w-[20vw]'>Access to a network of trusted healthcare professionals in your area.</p>
           </div>
           <div className='space-y-2 border border-indigo-300 py-5 px-10'>
             <h3 className='font-semibold'>PERSONALIZATION :</h3>
-            <p className='w-[20vw]'>Tailored recommendations and reminders to help you stay on top of your health.</p>
+            <p className='lg:w-[20vw]'>Tailored recommendations and reminders to help you stay on top of your health.</p>
           </div>
         </div>
       </div>

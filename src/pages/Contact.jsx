@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div className='space-y-8'>
+    <div className='space-y-8 w-[95vw]'>
       <center><h1>CONTACT <span>US</span></h1></center>
-      <div className='flex gap-10'>
-        <div className='w-[30vw]'><img src="/contact_image.png" alt="" /></div>
+      <div className='flex flex-col md:flex gap-10'>
+        <div className='md:w-[30vw]'><img src="/contact_image.png" alt="" /></div>
         <div className='flex flex-col gap-4'>
           <h2 className='text-2xl font-semibold'>OUR OFFICE :</h2>
           <div className=''>

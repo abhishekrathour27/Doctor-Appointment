@@ -34,8 +34,8 @@ export default function Login() {
 
 
     return (
-        <div>
-            <div className='border py-10 px-10 rounded-lg border-gray-300 shadow-xl space-y-3'>
+        <div className='flex items-center justify-center w-full'>
+            <div className='border py-10 px-10 rounded-lg border-gray-300 shadow-xl space-y-3  overflow-x-hidden'>
                 <h2 className='text-xl font-semibold'>Login</h2>
                 <p>Please login to Book Appointment</p>
                 <div>
