@@ -1,4 +1,4 @@
-import { DotIcon, VerifiedIcon } from 'lucide-react'
+import {  VerifiedIcon } from 'lucide-react'
 import React, { useState } from 'react'
 import { days } from '../components/data/appointDateData'
 import { times } from '../components/data/appointDateData'

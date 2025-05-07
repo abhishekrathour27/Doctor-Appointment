@@ -1,6 +1,7 @@
 import { Eye, EyeClosed } from 'lucide-react';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
+import { toast } from 'react-toastify';
 
 export default function SignUp() {
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function SignUp() {
         const data = JSON.parse(localStorage.getItem("user-detail")) || [];
         data.push(userData);
         localStorage.setItem("user-detail", JSON.stringify(data));
-        alert('Sign-up successed')
+        toast.success('Sign-up successed')
 
         setName('');
         setMail('');
