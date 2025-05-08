@@ -1,8 +1,6 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
 
 export default function Header() {
-    const navigate = useNavigate();
     
     return (
         <div className='bg-indigo-600 text-white w-[95vw]   md:min-h-[60vh] md:w-[80vw] rounded-lg md:flex md:items-center mt-5 gap-5 '>

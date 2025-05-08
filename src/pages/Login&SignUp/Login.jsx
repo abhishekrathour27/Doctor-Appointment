@@ -23,10 +23,10 @@ export default function Login() {
         if (matchUser) {
             localStorage.setItem('login-detail',JSON.stringify(matchUser))
             navigate('/')
-            toast.success('Looged-In successfully')
+            toast.success('Looged-In successfully');
         }
         else {
-            toast.error('Incorrect email or password')
+            toast.error('Incorrect email or password');
         }
 
         // localStorageData.find((e) => e.pa)
