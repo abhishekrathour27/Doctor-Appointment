@@ -18,7 +18,7 @@ export default function Login() {
         const localStorageData = JSON.parse(localStorage.getItem('user-detail')) || [];
 
         const matchUser = localStorageData.find((user) => user.userMail === logInMail && user.password === logInPass)
-        console.log(matchUser)
+        // console.log(matchUser)
 
         if (matchUser) {
             localStorage.setItem('login-detail',JSON.stringify(matchUser))
